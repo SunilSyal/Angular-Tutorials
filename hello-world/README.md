@@ -9,8 +9,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - Component creation 
     - Rendering of the html element with default value of title
     - Rendering of the html element with runtime updated value of title 
+4) End to test to check the rendering the html element with expected text
 
-Clone the folder and run npm i to use the app.
+Steps to run the app:
+- Clone the folder and run npm i to use the app.
+- run <b>ng serve</b>
+- run <b>ng serve --port 9000</b> if you want to run of a specific port
+- run ng test to unit test using karma
+- run ng e2e for end to end testing using protractor
 
 ## Development server
 
