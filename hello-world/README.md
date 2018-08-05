@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - Rendering of the html element with runtime updated value of title 
 4) End to test to check the rendering the html element with expected text
 
-###### Steps to run the app:
+## Steps to run the app:
 - Clone the folder and run <b>npm i</b> to use the app.
 - run <b>ng serve</b>
 - run <b>ng serve --port 9000</b> if you want to run of a specific port
