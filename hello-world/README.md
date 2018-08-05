@@ -15,8 +15,8 @@ Steps to run the app:
 - Clone the folder and run npm i to use the app.
 - run <b>ng serve</b>
 - run <b>ng serve --port 9000</b> if you want to run of a specific port
-- run ng test to unit test using karma
-- run ng e2e for end to end testing using protractor
+- run <b>ng test</b> to unit test using karma
+- run <b>ng e2e</b> for end to end testing using protractor
 
 ## Development server
 
