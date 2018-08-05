@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 4) End to test to check the rendering the html element with expected text
 
 Steps to run the app:
-- Clone the folder and run npm i to use the app.
+- Clone the folder and run <b>npm i</b> to use the app.
 - run <b>ng serve</b>
 - run <b>ng serve --port 9000</b> if you want to run of a specific port
 - run <b>ng test</b> to unit test using karma
