@@ -14,19 +14,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 5) Use SCSS as default ext for style files
 6) Introduction to BEM model to write reusable css using partials
 
-## Excercise
-1) Change the default number of the classes to 20
-2) Write test case to detect the number of classes
-3) Update the categories array and use 5 items in it 
-4) Update test cases to detect the number of categories
-5) Use category with no item in it and check that element is not generated in DOM.
-
 ## Steps to run the app:
 - Clone the folder and run <b>npm i</b> to use the app.
 - run <b>ng serve</b>
 - run <b>ng serve --port 9000</b> if you want to run of a specific port
 - run <b>ng test</b> to unit test using karma
 - run <b>ng e2e</b> for end to end testing using protractor
+
+## Excercise
+1) Change the default number of the classes to 20
+2) Write test case to detect the number of classes
+3) Update the categories array and use 5 items in it 
+4) Update test cases to detect the number of categories
+5) Use category with no item in it and check that element is not generated in DOM.
 
 ## Development server
 

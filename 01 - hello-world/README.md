@@ -18,6 +18,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - run <b>ng test</b> to unit test using karma
 - run <b>ng e2e</b> for end to end testing using protractor
 
+## Excercise:
+1) Add another public variable in class and use in html file
+2) Detect the text of the new element using both - unit test and e2e test
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
