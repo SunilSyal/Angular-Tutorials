@@ -10,6 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - Rendering of the html element with default value of title
     - Rendering of the html element with runtime updated value of title 
 
+Clone the folder and run npm i to use the app.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
