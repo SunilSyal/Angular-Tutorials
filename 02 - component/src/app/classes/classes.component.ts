@@ -11,11 +11,15 @@ export class ClassesComponent implements OnInit {
 
   // Public properties
   totalClasses = 10;
-  categories = ['primary', 'middle School']
+  categories = ['primary', 'middle School'];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getCategories () {
+    return this.categories;
   }
 
 }

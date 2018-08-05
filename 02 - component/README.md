@@ -27,6 +27,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3) Update the categories array and use 5 items in it 
 4) Update test cases to detect the number of categories
 5) Use category with no item in it and check that element is not generated in DOM.
+6) Write test cases to check the method written in class
 
 ## Development server
 

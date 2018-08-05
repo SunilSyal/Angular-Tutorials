@@ -3,14 +3,26 @@
 
   <ul *ngIf="categories.length">
 
-    <!-- ngFor to iterate over items -->
-    <li *ngFor="let item of categories">
+      <!-- ngFor to iterate over items -->
+      <li *ngFor="let item of categories">
+  
+        <!-- Pipes provided out of box by Angular -->
+        <button class="classes__item">{{ item | titlecase }}</button>
+  
+      </li>
+  
+    </ul>
 
-      <!-- Pipes provided out of box by Angular -->
-      <button class="classes__item">{{ item | titlecase }}</button>
+    <hr>
 
-    </li>
-
-  </ul>
+    <!-- Use alternate approach using methods 
+    <ul *ngIf="getCategories().length">
+      <li *ngFor="let item of getCategories()">
+  
+        <button class="classes__item">{{ item | titlecase }}</button>
+  
+      </li>
+    </ul>
+    -->
 
 </section>
