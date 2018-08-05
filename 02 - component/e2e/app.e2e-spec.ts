@@ -11,4 +11,12 @@ describe('School App', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Welcome to School!!!');
   });
+
+  it('should display the total number of classes section', () => {
+    expect(page.getClasses().getText()).toContain('Total Classes in the school');
+  });
+
+  it('should display two category buttons', () => {
+    expect(page.getClassesItems().count()).toEqual(2);
+  });
 });
