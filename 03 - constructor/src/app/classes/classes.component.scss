@@ -1,0 +1,11 @@
+@import '../../../styles/typography/headings';
+@import '../../../styles/typography/list-styles';
+@import '../../../styles/typography/decorators';
+
+.classes {
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+}

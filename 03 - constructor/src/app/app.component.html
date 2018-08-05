@@ -1,0 +1,15 @@
+<div class="school">
+    <h1>Welcome to {{ title }}</h1>
+
+    <app-school name = "ABC" totalClasses = "10"></app-school>
+
+    <!-- Won't display any name because there is no variable RST in app 
+    However, the number is calculated as an expression -->
+    <app-school [name] = "RST" [totalClasses] = "20"></app-school>
+
+    <!-- looking for an angular vriable -->
+    <app-school [name] = "'RST'"></app-school>
+
+    <app-school [name] = "bestSchoolName" [totalClasses] = "classCount"></app-school>
+</div>
+
