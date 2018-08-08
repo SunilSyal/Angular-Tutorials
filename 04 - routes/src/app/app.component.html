@@ -1,0 +1,14 @@
+<div class="school">
+    <h1>Welcome to {{ title }}</h1>
+
+    <div>
+        <button [routerLink]="['/school']" routerLinkActive="active">School</button>
+        <button [routerLink]="['/office']" routerLinkActive="active">Office</button>
+    </div>
+
+    <hr>
+
+    <router-outlet></router-outlet>
+
+</div>
+

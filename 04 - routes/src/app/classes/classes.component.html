@@ -1,0 +1,28 @@
+<section class="classes">
+  <p>Total Classes in the school: {{ totalClasses }} </p>
+
+  <ul *ngIf="categories.length">
+
+      <!-- ngFor to iterate over items -->
+      <li *ngFor="let item of categories">
+  
+        <!-- Pipes provided out of box by Angular -->
+        <button class="classes__item">{{ item | titlecase }}</button>
+  
+      </li>
+  
+    </ul>
+
+    <hr>
+
+    <!-- Use alternate approach using methods 
+    <ul *ngIf="getCategories().length">
+      <li *ngFor="let item of getCategories()">
+  
+        <button class="classes__item">{{ item | titlecase }}</button>
+  
+      </li>
+    </ul>
+    -->
+
+</section>

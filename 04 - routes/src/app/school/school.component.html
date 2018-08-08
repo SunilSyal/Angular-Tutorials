@@ -1,0 +1,16 @@
+<ul *ngIf="schools.length">
+
+    <!-- ngFor to iterate over items -->
+    <li *ngFor="let item of schools">
+
+        <!-- Pipes provided out of box by Angular -->
+        <button [routerLink]="['/school/' + item]" routerLinkActive="active">{{ item | titlecase }}</button>
+
+    </li>
+
+</ul>
+
+<hr>
+      
+<h2>School name: {{ name }} </h2>
+<app-classes [totalClasses] = "totalClasses"></app-classes>
