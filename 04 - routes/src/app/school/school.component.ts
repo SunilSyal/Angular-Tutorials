@@ -1,24 +1,22 @@
-import { Component, OnInit, Input, ElementRef } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input, ElementRef } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-school',
-  templateUrl: './school.component.html',
-  styleUrls: ['./school.component.scss']
+  selector: "app-school",
+  templateUrl: "./school.component.html",
+  styleUrls: ["./school.component.scss"]
 })
-
 export class SchoolComponent implements OnInit {
-
   // Fetches the value passed to the component
   @Input() name;
   @Input() totalClasses;
-  schools = ['ABC', 'XYZ', 'RST'];
+  schools = ["ABC", "XYZ", "RST"];
   selectedItem;
 
-  constructor(private route: ActivatedRoute, private eleRef: ElementRef) { 
+  constructor(private route: ActivatedRoute, private eleRef: ElementRef) {
     route.params.subscribe(params => {
-      // Read the route param "id" 
-      this.name = params['id'];
+      // Read the route param "id"
+      this.name = params["id"];
     });
   }
 
@@ -30,17 +28,15 @@ export class SchoolComponent implements OnInit {
     }
   }
 
-  ngAfterViewInit () {
+  ngAfterViewInit() {
     if (!this.name) {
       // This won't work in ngOnInit
-      let smallBox = this.eleRef.nativeElement.querySelector('button');
-        //.querySelector('button'); 
-        smallBox.dispatchEvent(new Event('click'));
+      let smallBox = this.eleRef.nativeElement.querySelector("button");
+      smallBox.dispatchEvent(new Event("click"));
     }
   }
 
-  setSelectedSchool (item) {
+  setSelectedSchool(item) {
     this.selectedItem = item;
   }
-
 }
