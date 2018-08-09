@@ -30,7 +30,16 @@ export class SchoolComponent implements OnInit {
     }
   }
 
-  setSelected (item) {
+  ngAfterViewInit () {
+    if (!this.name) {
+      // This won't work in ngOnInit
+      let smallBox = this.eleRef.nativeElement.querySelector('button');
+        //.querySelector('button'); 
+        smallBox.dispatchEvent(new Event('click'));
+    }
+  }
+
+  setSelectedSchool (item) {
     this.selectedItem = item;
   }
 
