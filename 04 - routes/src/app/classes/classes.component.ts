@@ -29,4 +29,8 @@ export class ClassesComponent implements OnInit {
     return this.categories;
   }
 
+  getLinkName (str) {
+    return str.split(' ').join('');
+  }
+
 }

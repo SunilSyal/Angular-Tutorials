@@ -4,7 +4,13 @@
     <li *ngFor="let item of schools">
 
         <!-- Pipes provided out of box by Angular -->
-        <button [routerLink]="['/school/' + item]" routerLinkActive="active">{{ item | titlecase }}</button>
+        <button 
+            [routerLink]="['/school/' + item]" 
+            routerLinkActive="active"
+            [ngClass]="{'active': selectedItem == item}"
+            (click) = "setSelected(item)">
+            {{ item | titlecase }}
+        </button>
 
     </li>
 

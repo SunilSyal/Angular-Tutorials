@@ -7,8 +7,8 @@
       <li *ngFor="let item of categories">
   
         <!-- Pipes provided out of box by Angular -->
-        <button class="classes__item">{{ item | titlecase }}</button>
-  
+        <button class="classes__item" [routerLink]="[getLinkName(item)]" routerLinkActive="active">{{ item | titlecase }}</button>
+
       </li>
   
     </ul>
@@ -24,5 +24,7 @@
       </li>
     </ul>
     -->
+
+    <router-outlet></router-outlet>
 
 </section>

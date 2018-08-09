@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -12,10 +12,12 @@ export class SchoolComponent implements OnInit {
   // Fetches the value passed to the component
   @Input() name;
   @Input() totalClasses;
-  schools = ['ABC', 'XYZ', 'RST']
+  schools = ['ABC', 'XYZ', 'RST'];
+  selectedItem;
 
-  constructor(private route: ActivatedRoute) { 
-    route.params.subscribe(params => { 
+  constructor(private route: ActivatedRoute, private eleRef: ElementRef) { 
+    route.params.subscribe(params => {
+      // Read the route param "id" 
       this.name = params['id'];
     });
   }
@@ -23,6 +25,13 @@ export class SchoolComponent implements OnInit {
   ngOnInit() {
     // Executes when the component is intiated - Angular controls it.
     //this.name = "Great School"
+    if (!this.name) {
+      this.selectedItem = this.schools[0];
+    }
+  }
+
+  setSelected (item) {
+    this.selectedItem = item;
   }
 
 }

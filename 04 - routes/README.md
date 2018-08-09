@@ -3,14 +3,13 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## What will we learn in this tutorial
-1) Using multiple instances of a component
-2) Passing different input values to different instances of a component
-3) Test cases to detect:
-    - 
-4) End to test cases to check the rendering of different instances of a component with different content in it
-5) constructor
-6) @Input
-7) ngOnit
+1) Basic routing 
+2) Routing with params
+3) Child routes
+4) Default selection - Programatically clicking DOM elements.
+5) Test cases to detect:
+    - XXXX
+6) End to test cases to check the rendering of different instances of a component with different content in it
 
 ## Steps to run the app:
 - Clone the folder and run <b>npm i</b> to use the app.
@@ -20,8 +19,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - run <b>ng e2e</b> for end to end testing using protractor
 
 ## Excercise
-1) Add a new school with 11 classes and name should be the default name defined in app module
-2) Write test case to detect the total number of schools
+1) Add a child route under Primary section whcih should have a unique URL for its children
+2)  Reloading the URL should highlight all affected routes
 
 ## Development server
 
