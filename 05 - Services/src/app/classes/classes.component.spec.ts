@@ -1,17 +1,28 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
-import { AppRoutingModule } from './../app-routing.module'; // Added here
+import { AppRoutingModule } from '../app-routing.module'; // Added here
 import { ClassesComponent } from './classes.component';
 import { SchoolComponent } from '../school/school.component';
 import { PrimaryComponent } from '../primary/primary.component';
 import { MiddleSchoolComponent } from '../middle-school/middle-school.component';
 import { OfficeComponent } from '../office/office.component';
+import { TotalBetterStaffService } from "../../services/betterStaff/betterStaff.service";
+import { Observable } from "rxjs";
 
 describe('ClassesComponent', () => {
   let component: ClassesComponent;
   let fixture: ComponentFixture<ClassesComponent>;
+  let mockHub;
 
   beforeEach(async(() => {
+    mockHub = jasmine.createSpyObj('totalBetterStaffService', ['calculateTotalStaff']);
+    mockHub.calculateTotalStaff.and.returnValue(Observable.of(
+      { 
+        totalCount: 22
+      }
+    )
+  );
+
     TestBed.configureTestingModule({
       declarations: [ 
         ClassesComponent,
@@ -20,7 +31,15 @@ describe('ClassesComponent', () => {
         MiddleSchoolComponent,
         OfficeComponent
       ],
-      providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+      providers: [
+        {
+          provide: APP_BASE_HREF, useValue : '/' 
+        }, 
+        {
+          provide: TotalBetterStaffService,
+          useValue: mockHub
+        }
+      ],
       imports: [
         AppRoutingModule
       ]
@@ -59,5 +78,13 @@ describe('ClassesComponent', () => {
     expect(cats[0].innerHTML).toEqual('One');
     expect(cats[3].innerHTML).toEqual('Four');
     expect(cats[1].innerHTML).not.toEqual('two');
+  });
+
+  it('should check the value of total teachers ==== Test will fail', () => {
+    expect(component.totalTeachers).toEqual(2);
+  });
+
+  it('should check the value of total teachers ==== Should pass', () => {
+    expect(component.totalBetterTeachers).toEqual(22);
   });
 });

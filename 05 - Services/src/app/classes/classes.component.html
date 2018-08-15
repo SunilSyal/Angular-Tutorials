@@ -1,0 +1,32 @@
+<section class="classes">
+    <p>Total Classes in the school: {{ totalClasses }} </p>
+    <p>Total Teachers in the school: {{ totalTeachers }} </p>
+    <p>Total Better Teachers in the school: {{ totalBetterTeachers }} </p>
+
+  <ul *ngIf="categories.length">
+
+      <!-- ngFor to iterate over items -->
+      <li *ngFor="let item of categories">
+  
+        <!-- Pipes provided out of box by Angular -->
+        <button class="classes__item" [routerLink]="[getLinkName(item)]" routerLinkActive="active">{{ item | titlecase }}</button>
+
+      </li>
+  
+    </ul>
+
+    <hr>
+
+    <!-- Use alternate approach using methods 
+    <ul *ngIf="getCategories().length">
+      <li *ngFor="let item of getCategories()">
+  
+        <button class="classes__item">{{ item | titlecase }}</button>
+  
+      </li>
+    </ul>
+    -->
+
+    <router-outlet></router-outlet>
+
+</section>

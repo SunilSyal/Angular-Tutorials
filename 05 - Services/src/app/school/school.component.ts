@@ -43,5 +43,7 @@ export class SchoolComponent implements OnInit {
 
   setSelectedSchool(item) {
     this.selectedItem = item;
+    // Randomly generating the total number of classe for demo purpose.
+    this.totalClasses = Math.floor(Math.random() * 10) + 1;
   }
 }

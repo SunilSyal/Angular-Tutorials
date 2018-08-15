@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
-import { AppRoutingModule } from './../app-routing.module'; // Added here
+import { AppRoutingModule } from '../app-routing.module'; // Added here
 import { ActivatedRoute } from "@angular/router";
 import { Observable } from 'rxjs';
 
@@ -9,6 +9,7 @@ import { ClassesComponent } from '../classes/classes.component';
 import { PrimaryComponent } from '../primary/primary.component';
 import { MiddleSchoolComponent } from '../middle-school/middle-school.component';
 import { OfficeComponent } from '../office/office.component';
+import { MockComponent } from 'mock-component';
 
 describe('SchoolComponent with route params', () => {
   let component: SchoolComponent;
@@ -17,8 +18,8 @@ describe('SchoolComponent with route params', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ 
-        SchoolComponent, 
-        ClassesComponent, 
+        SchoolComponent,
+        MockComponent(ClassesComponent), 
         PrimaryComponent,
         MiddleSchoolComponent,
         OfficeComponent
@@ -79,7 +80,7 @@ describe('SchoolComponent wihout route params', () => {
     TestBed.configureTestingModule({
       declarations: [ 
         SchoolComponent, 
-        ClassesComponent, 
+        MockComponent(ClassesComponent), 
         PrimaryComponent,
         MiddleSchoolComponent,
         OfficeComponent

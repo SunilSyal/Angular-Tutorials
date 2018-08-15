@@ -3,22 +3,16 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## What will we learn in this tutorial
-- Basic routing 
-- Routing with params
-- Child routes
-- Default selection - Programatically clicking DOM elements.
-- ngAfterViewInit
-- Click
-- ngClass
-- routerLink
-- routerLinkActive
-- ElementRef
-- dispatchEvent
+- Service
+- Use by creating an object
+- Inject service
+- Why injection is better than using as object
+- Mock component for testing (mock-component)
 - Test cases:
-    - Stub the param value and check the initialized data
-    - Other test cases 
-- End to test cases 
-
+    - Testing Service
+    - Testing observable
+    - Async testing with timeout 
+    - Mock observable in testing
 
 ## Steps to run the app:
 - Clone the folder and run <b>npm i</b> to use the app.
@@ -28,10 +22,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - run <b>ng e2e</b> for end to end testing using protractor
 
 ## Excercise
-- Add a child route under Primary section which should have a unique URL for its children
-- Reloading the URL should highlight all affected routes
-- Write unit test cases for Primary section childern with route params 
-- Write e2e test cases for newly added components
+- Write a new service (50 books per class) and inject in class component
+- Write test cases for betterStaff service
+- Write unit test cases to mock staff.service.ts
+- Write e2e test cases 
 
 ## Development server
 

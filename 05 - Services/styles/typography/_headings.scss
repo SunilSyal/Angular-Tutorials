@@ -1,0 +1,36 @@
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 26px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background: rgb(51, 86, 180);
+    float: left;
+    margin-right: 3px;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 10px;
+
+    &:hover {
+        background: rgb(37, 66, 145);
+    }
+
+    &.active {
+        background: rgb(37, 145, 86);
+    }
+}
